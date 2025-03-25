@@ -16,11 +16,18 @@ public class Main {
         pets.add(dog);
         pets.add(cat);
 
+        //יצירת רשימה של וטרינרים
+        List<GeneralVeterinarian> veterinarians = new ArrayList<>();
+        veterinarians.add((GeneralVeterinarian) generalVet);
+        veterinarians.add((GeneralVeterinarian) specialistVet);
+
+
         // הדגמת תהליך הבדיקה
         for (Pet pet : pets) {
             System.out.println("Examining " + pet.getName() + ":");
-            System.out.println(generalVet.examinePet(pet));
-            System.out.println(specialistVet.examinePet(pet));
+            for (GeneralVeterinarian vet : veterinarians){
+                System.out.println(vet.examinePet(pet));
+            }
             System.out.println();
         }
     }
