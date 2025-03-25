@@ -1,15 +1,9 @@
-public class SpecialistVeterinarian implements Veterinarian{
-    private String name;
+public class SpecialistVeterinarian extends GeneralVeterinarian{
     private String specialty;
 
     public SpecialistVeterinarian(String name, String specialty) {
-        this.name = name;
+        super(name);
         this.specialty = specialty;
-    }
-
-    @Override
-    public String getName() {
-        return name;
     }
 
     @Override
